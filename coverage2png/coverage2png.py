@@ -9,13 +9,8 @@ from .coverage_model import CoverageModel
 
 
 def coverage_to_png(input_path: str = 'coverage.json', output_path: str = 'result.png'):
-    if not input_path:
-        input_path = os.path.join(os.getcwd(), 'coverage.json')
     df, depth = load_data(input_path)
     figure = create_figure(df, depth)
-
-    if not output_path:
-        output_path = os.path.join(os.getcwd(), 'result.png')
     figure.write_image(output_path)
 
 

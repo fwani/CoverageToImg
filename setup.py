@@ -9,7 +9,7 @@ setuptools.setup(
     description="This is a tool for converting coverage.json to png image.",
     long_description= open("README.md", "r").read(),
     long_description_content_type="text/markdown",
-    packages=setuptools.find_packages(exclude=['tests']),
+    packages=setuptools.find_packages(include=['coverage2png'], exclude=['tests']),
     entry_points={
         'console_scripts': [
             'coverage2png = coverage2png.main:main',

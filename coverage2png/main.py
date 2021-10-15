@@ -27,12 +27,13 @@ from .coverage2png import coverage_to_png
 
 
 @click.command()
-@click.option("--input-file", "-i", required=True, default='coverage.json',
+@click.option("--input-file", "-i", type=str, required=False, default='coverage.json', show_default=True,
               help="The input path of coverage.json file that is made by coverage of python")
-@click.option("--output-file", "-o", required=True, default='coverage.png',
+@click.option("--output-file", "-o", type=str, required=False, default='coverage.png', show_default=True,
               help="The output path")
 def main(input_file, output_file):
     """coverage2png command line interface
+
     Usage:
         coverage2png -i coverage.json -o coverage.png
     """
