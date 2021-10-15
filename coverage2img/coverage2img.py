@@ -8,7 +8,7 @@ import plotly.express as px
 from .coverage_model import CoverageModel
 
 
-def coverage_to_png(input_path: str = 'coverage.json', output_path: str = 'result.png'):
+def coverage_to_img(input_path: str = 'coverage.json', output_path: str = 'coverage.png'):
     df, depth = load_data(input_path)
     figure = create_figure(df, depth)
     figure.write_image(output_path)
@@ -42,7 +42,7 @@ def create_figure(df: pd.DataFrame, depth: int):
 
 if __name__ == '__main__':
     pd.set_option('max_column', None)
-    coverage_to_png('../coverage.json')
+    coverage_to_img('../coverage.json')
 
     # import matplotlib.pyplot as plt
     #

@@ -1,18 +1,24 @@
 import setuptools
 
 setuptools.setup(
-    name="coverage2png",
-    url="https://github.com/fwani/CoverageToPNG",
-    version="0.0.1",
+    name="coverage2img",
+    url="https://github.com/fwani/CoverageToImg",
+    version="0.0.1rc1",
     author="fwani",
     author_email="seungfwani@gmail.com",
-    description="This is a tool for converting coverage.json to png image.",
-    long_description= open("README.md", "r").read(),
+    description="This is a tool for converting coverage.json to image.",
+    long_description=open("README.md", "r").read(),
     long_description_content_type="text/markdown",
-    packages=setuptools.find_packages(include=['coverage2png'], exclude=['tests']),
+    packages=setuptools.find_packages(include=['coverage2img'], exclude=['tests']),
+    install_requires=[
+        "kaleido==0.2.1",
+        "plotly==5.3.1",
+        "pandas==1.3.3",
+        "click==8.0.3",
+    ],
     entry_points={
         'console_scripts': [
-            'coverage2png = coverage2png.main:main',
+            'coverage2img = coverage2img.main:main',
         ],
     },
     classifiers=[

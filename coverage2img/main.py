@@ -21,6 +21,24 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
-__author__ = "FWANI"
-__email__ = "seungfwani@gmail.com"
-__version__ = "0.0.1"
+import click
+
+from .coverage2img import coverage_to_img
+
+
+@click.command()
+@click.option("--input-file", "-i", type=str, required=False, default='coverage.json', show_default=True,
+              help="The input path of coverage.json file that is made by coverage of python")
+@click.option("--output-file", "-o", type=str, required=False, default='coverage.png', show_default=True,
+              help="The output path")
+def main(input_file, output_file):
+    """coverage2img command line interface
+
+    Usage:
+        coverage2img -i coverage.json -o coverage.png
+    """
+    coverage_to_img(input_path=input_file, output_path=output_file)
+
+
+if __name__ == "__main__":
+    main()

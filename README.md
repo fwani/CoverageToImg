@@ -1,2 +1,2 @@
-# CoverageToPNG
-To convert from coverage.json to png image
+# CoverageToImg
+To convert from coverage.json to image
