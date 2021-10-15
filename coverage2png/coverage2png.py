@@ -5,7 +5,7 @@ from typing import Tuple
 import pandas as pd
 import plotly.express as px
 
-from coverage_model import CoverageModel
+from .coverage_model import CoverageModel
 
 
 def coverage_to_png(input_path: str = 'coverage.json', output_path: str = 'result.png'):
