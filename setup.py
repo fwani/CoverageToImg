@@ -3,7 +3,7 @@ import setuptools
 setuptools.setup(
     name="coverage2img",
     url="https://github.com/fwani/CoverageToImg",
-    version="0.0.1rc1",
+    version="0.0.1rc2",
     author="fwani",
     author_email="seungfwani@gmail.com",
     description="This is a tool for converting coverage.json to image.",

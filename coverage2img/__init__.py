@@ -23,4 +23,4 @@ SOFTWARE.
 """
 __author__ = "FWANI"
 __email__ = "seungfwani@gmail.com"
-__version__ = "0.0.1rc1"
+__version__ = "0.0.1rc2"
